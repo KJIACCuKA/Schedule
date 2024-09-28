@@ -12,8 +12,8 @@
 		562972602C909568000DFCB0 /* HeaderOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629725F2C909568000DFCB0 /* HeaderOptionsTableViewCell.swift */; };
 		563C7F2B2C9DFC8400686185 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C7F2A2C9DFC8400686185 /* ScheduleModel.swift */; };
 		563C7F2E2C9E009100686185 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C7F2D2C9E009100686185 /* RealmManager.swift */; };
-		5658917D2CA7EE0A0033F053 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5658917C2CA7EE0A0033F053 /* Realm */; };
-		5658917F2CA7EE0A0033F053 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5658917E2CA7EE0A0033F053 /* RealmSwift */; };
+		565891872CA7F1CA0033F053 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 565891862CA7F1CA0033F053 /* RealmSwift */; };
+		565891892CA7FEB60033F053 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565891882CA7FEB60033F053 /* UIColor.swift */; };
 		5662344B2C90495F00ACCCA5 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662344A2C90495F00ACCCA5 /* TasksTableViewCell.swift */; };
 		5662344E2C90518900ACCCA5 /* PressButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662344D2C90518900ACCCA5 /* PressButtonProtocol.swift */; };
 		5662D4D52C91B0BA00ECB9AD /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662D4D42C91B0BA00ECB9AD /* AlertDate.swift */; };
@@ -51,6 +51,7 @@
 		5629725F2C909568000DFCB0 /* HeaderOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOptionsTableViewCell.swift; sourceTree = "<group>"; };
 		563C7F2A2C9DFC8400686185 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		563C7F2D2C9E009100686185 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		565891882CA7FEB60033F053 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		5662344A2C90495F00ACCCA5 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 		5662344D2C90518900ACCCA5 /* PressButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressButtonProtocol.swift; sourceTree = "<group>"; };
 		5662D4D42C91B0BA00ECB9AD /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
@@ -88,8 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5658917F2CA7EE0A0033F053 /* RealmSwift in Frameworks */,
-				5658917D2CA7EE0A0033F053 /* Realm in Frameworks */,
+				565891872CA7F1CA0033F053 /* RealmSwift in Frameworks */,
 				56C1EE992C8E398400650486 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +226,7 @@
 				56B5C20B2C8F70F3008BFF1A /* UIStackViewExtension.swift */,
 				56B5C20F2C8F7A77008BFF1A /* UILabel.swift */,
 				56B5C2112C8F7D81008BFF1A /* UIFont.swift */,
+				565891882CA7FEB60033F053 /* UIColor.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -308,8 +309,7 @@
 			name = Schedule;
 			packageProductDependencies = (
 				56C1EE982C8E398400650486 /* FSCalendar */,
-				5658917C2CA7EE0A0033F053 /* Realm */,
-				5658917E2CA7EE0A0033F053 /* RealmSwift */,
+				565891862CA7F1CA0033F053 /* RealmSwift */,
 			);
 			productName = Schedule;
 			productReference = 56C1EE772C8E2F4C00650486 /* Schedule.app */;
@@ -341,7 +341,7 @@
 			mainGroup = 56C1EE6E2C8E2F4C00650486;
 			packageReferences = (
 				56C1EE972C8E398400650486 /* XCRemoteSwiftPackageReference "FSCalendar" */,
-				5658917B2CA7EE0A0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				565891852CA7F1CA0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 56C1EE782C8E2F4C00650486 /* Products */;
 			projectDirPath = "";
@@ -374,6 +374,7 @@
 				566EE7422C94B574002C4506 /* ColorTableViewCell.swift in Sources */,
 				566EE7442C94BA3D002C4506 /* TaskOptionTableViewController.swift in Sources */,
 				56C1EE7F2C8E2F4C00650486 /* MainTabBarController.swift in Sources */,
+				565891892CA7FEB60033F053 /* UIColor.swift in Sources */,
 				56B5C2082C8F5846008BFF1A /* ScheduleTableViewCell.swift in Sources */,
 				56C1EE7B2C8E2F4C00650486 /* AppDelegate.swift in Sources */,
 				566EE7402C94AEF2002C4506 /* TeachersViewController.swift in Sources */,
@@ -550,6 +551,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,6 +579,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,12 +617,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5658917B2CA7EE0A0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		565891852CA7F1CA0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 10.12.0;
+				minimumVersion = 10.54.0;
 			};
 		};
 		56C1EE972C8E398400650486 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
@@ -633,14 +636,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5658917C2CA7EE0A0033F053 /* Realm */ = {
+		565891862CA7F1CA0033F053 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5658917B2CA7EE0A0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		5658917E2CA7EE0A0033F053 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5658917B2CA7EE0A0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 565891852CA7F1CA0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 		56C1EE982C8E398400650486 /* FSCalendar */ = {

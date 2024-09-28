@@ -1,4 +1,5 @@
 import UIKit
+import RealmSwift
 
 // - ДЛЯ ПРОЕКТА TRACKER МОЖНО СДЕЛАТЬ ТАКУЮ ЖЕ РЕАЛИЗАЦИЮ ДЛЯ ЭКРАНОВ С ДОБАВЛЕНИЕМ ПРИВЫЧЕК
 class OptionsScheduleTableViewController: UITableViewController {
@@ -6,6 +7,7 @@ class OptionsScheduleTableViewController: UITableViewController {
     private let idOptionsScheduleCell = "idOptionsScheduleCell"
     private let idOptionsHeader = "idOptionsScheduleHeader"
     let headerNameArray = ["ДАТА И ВРЕМЯ", "ПРЕДМЕТ", "ПРЕПОДАВАТЕЛЬ", "ЦВЕТ", "ПЕРИОД"]
+    private let scheduleModel = ScheduleModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,6 +15,7 @@ class OptionsScheduleTableViewController: UITableViewController {
         view.backgroundColor = .cyan
         title = "Настройка расписания"
         createBarButton()
+        print(Realm.Configuration.defaultConfiguration.fileURL?.absoluteString ?? String.self)
     }
     
     private func settingsForTableView() {
@@ -31,7 +34,9 @@ class OptionsScheduleTableViewController: UITableViewController {
     }
     
     @objc private func saveButtonTapped() {
-        printContent("PRINT SUKA BLYAT")
+        print("PRINT SUKA BLYAT")
+        
+        RealmManager.shared.saveScheduleModel(model: scheduleModel)
     }
 }
 
@@ -59,6 +64,7 @@ extension OptionsScheduleTableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsScheduleCell, for: indexPath) as? OptionsScheduleTableViewCell else { return UITableViewCell() }
         // - Передаем названия ячеек 
         cell.cellConfigure(indexPath: indexPath)
+        cell.switchRepeatDelegate = self
         return cell
     }
     
@@ -83,20 +89,32 @@ extension OptionsScheduleTableViewController {
         switch indexPath {
         case [0,0]:
             alertDate(label: cell.nameCellLabel) { numberWeekday, date in
+                self.scheduleModel.scheduleDate = date
+                self.scheduleModel.scheduleWeekday = numberWeekday
                 print("OK")
             }
         case [0,1]:
             alertTime(label: cell.nameCellLabel) { timeString in
+                self.scheduleModel.scheduleTime = timeString
                 print("OK time")
             }
         case [1,0]:
-            alertForCellName(label: cell.nameCellLabel, name: "Название предмета", placeholder: "Введите название предмета")
+            alertForCellName(label: cell.nameCellLabel, name: "Название предмета", placeholder: "Введите название предмета") { text in
+                self.scheduleModel.scheduleName = text
+            }
         case [1,1]:
-            alertForCellName(label: cell.nameCellLabel, name: "Тип предмета", placeholder: "Введите тип предмета")
+            alertForCellName(label: cell.nameCellLabel, name: "Тип предмета", placeholder: "Введите тип предмета") { text in
+                self.scheduleModel.scheduleType = text
+            }
+            
         case [1,2]:
-            alertForCellName(label: cell.nameCellLabel, name: "Корпус", placeholder: "Введите номер корпуса")
+            alertForCellName(label: cell.nameCellLabel, name: "Корпус", placeholder: "Введите номер корпуса") { text in
+                self.scheduleModel.scheduleBuilding = text
+            }
         case [1,3]:
-            alertForCellName(label: cell.nameCellLabel, name: "Аудитория", placeholder: "Введите номер аудитории")
+            alertForCellName(label: cell.nameCellLabel, name: "Аудитория", placeholder: "Введите номер аудитории") { text in
+                self.scheduleModel.scheduleAudience = text
+            }
         case [2,0]:
             let teachersVC = TeachersViewController()
             navigationController?.pushViewController(teachersVC, animated: true)
@@ -107,5 +125,11 @@ extension OptionsScheduleTableViewController {
             print("Tap last cell")
         }
     }
-    
+}
+
+extension OptionsScheduleTableViewController: SwitchRepeatDelegate {
+    func switchRepeat(value: Bool) {
+        print(value)
+        scheduleModel.scheduleRepeat = value
+    }
 }

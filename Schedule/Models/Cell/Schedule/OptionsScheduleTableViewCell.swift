@@ -15,6 +15,8 @@ class OptionsScheduleTableViewCell: UITableViewCell {
                          [""],
                          ["Повторять каждые 7 дней"]]
     
+    weak var switchRepeatDelegate: SwitchRepeatDelegate?
+    
     private lazy var backgroundViewCell: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -93,6 +95,8 @@ class OptionsScheduleTableViewCell: UITableViewCell {
     }
     
     @objc private func switchChanged(paramTarget: UISwitch) {
-        
+        switchRepeatDelegate?.switchRepeat(value: paramTarget.isOn)
     }
 }
+
+

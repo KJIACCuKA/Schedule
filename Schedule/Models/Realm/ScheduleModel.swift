@@ -6,17 +6,17 @@
 //
 
 import UIKit
-//import RealmSwift
-//
-//class ScheduleModel: Object {
-//    @Persisted var scheduleDate = Date()
-//    @Persisted var scheduleTime = Date()
-//    @Persisted var scheduleName: String = ""
-//    @Persisted var scheduleType: String = ""
-//    @Persisted var scheduleBuilding: String = ""
-//    @Persisted var scheduleAudience: String = ""
-//    @Persisted var scheduleTeacher: String = ""
-//    @Persisted var scheduleColor: String = ""
-//    @Persisted var scheduleRepeat: Bool = true
-//    @Persisted var scheduleWeekday: Int = 1
-//}
+import RealmSwift
+
+class ScheduleModel: Object {
+    @Persisted var scheduleDate = Date()
+    @Persisted var scheduleTime = Date()
+    @Persisted var scheduleName: String = ""
+    @Persisted var scheduleType: String = ""
+    @Persisted var scheduleBuilding: String = ""
+    @Persisted var scheduleAudience: String = ""
+    @Persisted var scheduleTeacher: String = "Name Lastname"
+    @Persisted var scheduleColor: String = "FFFFFF"
+    @Persisted var scheduleRepeat: Bool = true
+    @Persisted var scheduleWeekday: Int = 1
+}

@@ -4,3 +4,7 @@ import UIKit
 protocol PressReadyTaskButtonDelegate: AnyObject {
     func readyButtonTapped(indexPath: IndexPath)
 }
+
+protocol SwitchRepeatDelegate: AnyObject {
+    func switchRepeat(value: Bool)
+}

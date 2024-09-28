@@ -71,11 +71,17 @@ extension ContactOptionTableViewController {
         guard let cell = tableView.cellForRow(at: indexPath) as? ContactOptionTableViewCell else { return }
         switch indexPath.section {
         case 0:
-            alertForCellName(label: cell.nameCellLabel, name: "Имя преподавателя", placeholder: "Введите имя преподавателя")
+            alertForCellName(label: cell.nameCellLabel, name: "Имя преподавателя", placeholder: "Введите имя преподавателя") { text in
+                print(text)
+            }
         case 1:
-            alertForCellName(label: cell.nameCellLabel, name: "Телефон преподавателя", placeholder: "Введите телефон преподавателя")
+            alertForCellName(label: cell.nameCellLabel, name: "Телефон преподавателя", placeholder: "Введите телефон преподавателя") { text in
+                print(text)
+            }
         case 2:
-            alertForCellName(label: cell.nameCellLabel, name: "E-mail преподавателя", placeholder: "Введите e-mail преподавателя")
+            alertForCellName(label: cell.nameCellLabel, name: "E-mail преподавателя", placeholder: "Введите e-mail преподавателя") { text in
+                print(text)
+            }
         case 3:
             alertFriendOrTeacher(label: cell.nameCellLabel) { _ in
                 print("OK")

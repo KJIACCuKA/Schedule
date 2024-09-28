@@ -9,7 +9,7 @@ import UIKit
 
 extension UIViewController {
     
-    func alertForCellName(label: UILabel, name: String, placeholder: String) {
+    func alertForCellName(label: UILabel, name: String, placeholder: String, completionHandler: @escaping (String) -> Void) {
         
         let alert = UIAlertController(title: name, message: nil, preferredStyle: .alert)
         
@@ -20,6 +20,7 @@ extension UIViewController {
             }
             label.text = text
             label.textColor = .black
+            completionHandler(text)
         }
         
         alert.addTextField { alertTF in

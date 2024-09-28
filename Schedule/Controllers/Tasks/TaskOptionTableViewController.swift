@@ -75,9 +75,13 @@ extension TaskOptionTableViewController {
                 print("OK")
             }
         case 1:
-            alertForCellName(label: cell.nameCellLabel, name: "Название предмета", placeholder: "Введите название предмета")
+            alertForCellName(label: cell.nameCellLabel, name: "Название предмета", placeholder: "Введите название предмета") { text in
+                print(text)
+            }
         case 2:
-            alertForCellName(label: cell.nameCellLabel, name: "Задание", placeholder: "Введите задание")
+            alertForCellName(label: cell.nameCellLabel, name: "Задание", placeholder: "Введите задание") { text in
+                print(text)
+            }
         case 3:
             let colorTaskTVC = ColorTaskTableViewController()
                 navigationController?.pushViewController(colorTaskTVC, animated: true)
