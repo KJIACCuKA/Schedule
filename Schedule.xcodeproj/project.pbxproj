@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		562972562C908120000DFCB0 /* OptionsScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562972552C908120000DFCB0 /* OptionsScheduleTableViewController.swift */; };
+		5629725B2C908556000DFCB0 /* OptionsScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629725A2C908556000DFCB0 /* OptionsScheduleTableViewCell.swift */; };
+		562972602C909568000DFCB0 /* HeaderOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629725F2C909568000DFCB0 /* HeaderOptionsTableViewCell.swift */; };
+		563C7F2B2C9DFC8400686185 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C7F2A2C9DFC8400686185 /* ScheduleModel.swift */; };
+		563C7F2E2C9E009100686185 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C7F2D2C9E009100686185 /* RealmManager.swift */; };
+		5658917D2CA7EE0A0033F053 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5658917C2CA7EE0A0033F053 /* Realm */; };
+		5658917F2CA7EE0A0033F053 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5658917E2CA7EE0A0033F053 /* RealmSwift */; };
+		5662344B2C90495F00ACCCA5 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662344A2C90495F00ACCCA5 /* TasksTableViewCell.swift */; };
+		5662344E2C90518900ACCCA5 /* PressButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662344D2C90518900ACCCA5 /* PressButtonProtocol.swift */; };
+		5662D4D52C91B0BA00ECB9AD /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662D4D42C91B0BA00ECB9AD /* AlertDate.swift */; };
+		566EE73A2C94A823002C4506 /* AlertTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7392C94A823002C4506 /* AlertTime.swift */; };
+		566EE73C2C94A9E1002C4506 /* AlertForSubjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE73B2C94A9E1002C4506 /* AlertForSubjects.swift */; };
+		566EE73E2C94AEC7002C4506 /* ScheduleColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE73D2C94AEC7002C4506 /* ScheduleColorViewController.swift */; };
+		566EE7402C94AEF2002C4506 /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE73F2C94AEF2002C4506 /* TeachersViewController.swift */; };
+		566EE7422C94B574002C4506 /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7412C94B574002C4506 /* ColorTableViewCell.swift */; };
+		566EE7442C94BA3D002C4506 /* TaskOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7432C94BA3D002C4506 /* TaskOptionTableViewController.swift */; };
+		566EE7462C94BB6E002C4506 /* OptionsTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7452C94BB6E002C4506 /* OptionsTaskTableViewCell.swift */; };
+		566EE7482C94C0EB002C4506 /* ColorTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7472C94C0EB002C4506 /* ColorTaskTableViewController.swift */; };
+		566EE74A2C9593C0002C4506 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7492C9593C0002C4506 /* ContactsTableViewCell.swift */; };
+		566EE74C2C95A51A002C4506 /* ContactOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE74B2C95A51A002C4506 /* ContactOptionTableViewController.swift */; };
+		566EE74E2C95A705002C4506 /* ContactOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE74D2C95A705002C4506 /* ContactOptionTableViewCell.swift */; };
+		566EE7502C95B086002C4506 /* AlertPhotoCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE74F2C95B086002C4506 /* AlertPhotoCamera.swift */; };
+		566EE7522C95B2DA002C4506 /* AlertTeacherAndFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7512C95B2DA002C4506 /* AlertTeacherAndFriends.swift */; };
+		56B5C2082C8F5846008BFF1A /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5C2072C8F5846008BFF1A /* ScheduleTableViewCell.swift */; };
+		56B5C20C2C8F70F3008BFF1A /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5C20B2C8F70F3008BFF1A /* UIStackViewExtension.swift */; };
+		56B5C2102C8F7A77008BFF1A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5C20F2C8F7A77008BFF1A /* UILabel.swift */; };
+		56B5C2122C8F7D81008BFF1A /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5C2112C8F7D81008BFF1A /* UIFont.swift */; };
+		56C1EE7B2C8E2F4C00650486 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1EE7A2C8E2F4C00650486 /* AppDelegate.swift */; };
+		56C1EE7D2C8E2F4C00650486 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1EE7C2C8E2F4C00650486 /* SceneDelegate.swift */; };
+		56C1EE7F2C8E2F4C00650486 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1EE7E2C8E2F4C00650486 /* MainTabBarController.swift */; };
+		56C1EE842C8E2F4D00650486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C1EE832C8E2F4D00650486 /* Assets.xcassets */; };
+		56C1EE872C8E2F4D00650486 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 56C1EE862C8E2F4D00650486 /* Base */; };
+		56C1EE922C8E332F00650486 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1EE912C8E332F00650486 /* ScheduleViewController.swift */; };
+		56C1EE942C8E336900650486 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1EE932C8E336900650486 /* TasksViewController.swift */; };
+		56C1EE962C8E338D00650486 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1EE952C8E338D00650486 /* ContactsTableViewController.swift */; };
+		56C1EE992C8E398400650486 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 56C1EE982C8E398400650486 /* FSCalendar */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		562972552C908120000DFCB0 /* OptionsScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScheduleTableViewController.swift; sourceTree = "<group>"; };
+		5629725A2C908556000DFCB0 /* OptionsScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		5629725F2C909568000DFCB0 /* HeaderOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOptionsTableViewCell.swift; sourceTree = "<group>"; };
+		563C7F2A2C9DFC8400686185 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		563C7F2D2C9E009100686185 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		5662344A2C90495F00ACCCA5 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
+		5662344D2C90518900ACCCA5 /* PressButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressButtonProtocol.swift; sourceTree = "<group>"; };
+		5662D4D42C91B0BA00ECB9AD /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
+		566EE7392C94A823002C4506 /* AlertTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTime.swift; sourceTree = "<group>"; };
+		566EE73B2C94A9E1002C4506 /* AlertForSubjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertForSubjects.swift; sourceTree = "<group>"; };
+		566EE73D2C94AEC7002C4506 /* ScheduleColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleColorViewController.swift; sourceTree = "<group>"; };
+		566EE73F2C94AEF2002C4506 /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
+		566EE7412C94B574002C4506 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
+		566EE7432C94BA3D002C4506 /* TaskOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOptionTableViewController.swift; sourceTree = "<group>"; };
+		566EE7452C94BB6E002C4506 /* OptionsTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTaskTableViewCell.swift; sourceTree = "<group>"; };
+		566EE7472C94C0EB002C4506 /* ColorTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTaskTableViewController.swift; sourceTree = "<group>"; };
+		566EE7492C9593C0002C4506 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		566EE74B2C95A51A002C4506 /* ContactOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactOptionTableViewController.swift; sourceTree = "<group>"; };
+		566EE74D2C95A705002C4506 /* ContactOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactOptionTableViewCell.swift; sourceTree = "<group>"; };
+		566EE74F2C95B086002C4506 /* AlertPhotoCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPhotoCamera.swift; sourceTree = "<group>"; };
+		566EE7512C95B2DA002C4506 /* AlertTeacherAndFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTeacherAndFriends.swift; sourceTree = "<group>"; };
+		56B5C2072C8F5846008BFF1A /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		56B5C20B2C8F70F3008BFF1A /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
+		56B5C20F2C8F7A77008BFF1A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		56B5C2112C8F7D81008BFF1A /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		56C1EE772C8E2F4C00650486 /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56C1EE7A2C8E2F4C00650486 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		56C1EE7C2C8E2F4C00650486 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		56C1EE7E2C8E2F4C00650486 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		56C1EE832C8E2F4D00650486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56C1EE862C8E2F4D00650486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		56C1EE882C8E2F4D00650486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56C1EE912C8E332F00650486 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		56C1EE932C8E336900650486 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		56C1EE952C8E338D00650486 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56C1EE742C8E2F4C00650486 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5658917F2CA7EE0A0033F053 /* RealmSwift in Frameworks */,
+				5658917D2CA7EE0A0033F053 /* Realm in Frameworks */,
+				56C1EE992C8E398400650486 /* FSCalendar in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		562972572C90812D000DFCB0 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				56C1EE912C8E332F00650486 /* ScheduleViewController.swift */,
+				562972552C908120000DFCB0 /* OptionsScheduleTableViewController.swift */,
+				566EE73D2C94AEC7002C4506 /* ScheduleColorViewController.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		562972582C90814C000DFCB0 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				566EE7432C94BA3D002C4506 /* TaskOptionTableViewController.swift */,
+				56C1EE932C8E336900650486 /* TasksViewController.swift */,
+				566EE7472C94C0EB002C4506 /* ColorTaskTableViewController.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		562972592C908152000DFCB0 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				566EE73F2C94AEF2002C4506 /* TeachersViewController.swift */,
+				566EE74B2C95A51A002C4506 /* ContactOptionTableViewController.swift */,
+				56C1EE952C8E338D00650486 /* ContactsTableViewController.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		5629725C2C909156000DFCB0 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				5629725A2C908556000DFCB0 /* OptionsScheduleTableViewCell.swift */,
+				56B5C2072C8F5846008BFF1A /* ScheduleTableViewCell.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		5629725D2C90915C000DFCB0 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				5662344A2C90495F00ACCCA5 /* TasksTableViewCell.swift */,
+				566EE7452C94BB6E002C4506 /* OptionsTaskTableViewCell.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		5629725E2C909162000DFCB0 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				566EE7492C9593C0002C4506 /* ContactsTableViewCell.swift */,
+				566EE74D2C95A705002C4506 /* ContactOptionTableViewCell.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		563C7F292C9DFC5E00686185 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				563C7F2A2C9DFC8400686185 /* ScheduleModel.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		563C7F2C2C9E007500686185 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				563C7F2D2C9E009100686185 /* RealmManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5662344C2C90516F00ACCCA5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5662344D2C90518900ACCCA5 /* PressButtonProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5662D4D32C91B0AC00ECB9AD /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				5662D4D42C91B0BA00ECB9AD /* AlertDate.swift */,
+				566EE7392C94A823002C4506 /* AlertTime.swift */,
+				566EE73B2C94A9E1002C4506 /* AlertForSubjects.swift */,
+				566EE74F2C95B086002C4506 /* AlertPhotoCamera.swift */,
+				566EE7512C95B2DA002C4506 /* AlertTeacherAndFriends.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		56B5C2092C8F596B008BFF1A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				563C7F292C9DFC5E00686185 /* Realm */,
+				5662D4D32C91B0AC00ECB9AD /* Alert */,
+				56B5C20A2C8F5972008BFF1A /* Cell */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56B5C20A2C8F5972008BFF1A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				566EE7412C94B574002C4506 /* ColorTableViewCell.swift */,
+				5629725F2C909568000DFCB0 /* HeaderOptionsTableViewCell.swift */,
+				5629725E2C909162000DFCB0 /* Contacts */,
+				5629725C2C909156000DFCB0 /* Schedule */,
+				5629725D2C90915C000DFCB0 /* Tasks */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		56B5C20D2C8F710E008BFF1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56B5C20E2C8F7116008BFF1A /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		56B5C20E2C8F7116008BFF1A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				56B5C20B2C8F70F3008BFF1A /* UIStackViewExtension.swift */,
+				56B5C20F2C8F7A77008BFF1A /* UILabel.swift */,
+				56B5C2112C8F7D81008BFF1A /* UIFont.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		56C1EE6E2C8E2F4C00650486 = {
+			isa = PBXGroup;
+			children = (
+				56C1EE792C8E2F4C00650486 /* Schedule */,
+				56C1EE782C8E2F4C00650486 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56C1EE782C8E2F4C00650486 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56C1EE772C8E2F4C00650486 /* Schedule.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56C1EE792C8E2F4C00650486 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				563C7F2C2C9E007500686185 /* Services */,
+				5662344C2C90516F00ACCCA5 /* Protocols */,
+				56C1EE8E2C8E30C800650486 /* Applications */,
+				56B5C20D2C8F710E008BFF1A /* Extensions */,
+				56C1EE8F2C8E30E500650486 /* Controllers */,
+				56B5C2092C8F596B008BFF1A /* Models */,
+				56C1EE902C8E310100650486 /* Resourses */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		56C1EE8E2C8E30C800650486 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				56C1EE7A2C8E2F4C00650486 /* AppDelegate.swift */,
+				56C1EE7C2C8E2F4C00650486 /* SceneDelegate.swift */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		56C1EE8F2C8E30E500650486 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				56C1EE7E2C8E2F4C00650486 /* MainTabBarController.swift */,
+				562972572C90812D000DFCB0 /* Schedule */,
+				562972582C90814C000DFCB0 /* Tasks */,
+				562972592C908152000DFCB0 /* Contacts */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		56C1EE902C8E310100650486 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				56C1EE832C8E2F4D00650486 /* Assets.xcassets */,
+				56C1EE852C8E2F4D00650486 /* LaunchScreen.storyboard */,
+				56C1EE882C8E2F4D00650486 /* Info.plist */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56C1EE762C8E2F4C00650486 /* Schedule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56C1EE8B2C8E2F4D00650486 /* Build configuration list for PBXNativeTarget "Schedule" */;
+			buildPhases = (
+				56C1EE732C8E2F4C00650486 /* Sources */,
+				56C1EE742C8E2F4C00650486 /* Frameworks */,
+				56C1EE752C8E2F4C00650486 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Schedule;
+			packageProductDependencies = (
+				56C1EE982C8E398400650486 /* FSCalendar */,
+				5658917C2CA7EE0A0033F053 /* Realm */,
+				5658917E2CA7EE0A0033F053 /* RealmSwift */,
+			);
+			productName = Schedule;
+			productReference = 56C1EE772C8E2F4C00650486 /* Schedule.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56C1EE6F2C8E2F4C00650486 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					56C1EE762C8E2F4C00650486 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 56C1EE722C8E2F4C00650486 /* Build configuration list for PBXProject "Schedule" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56C1EE6E2C8E2F4C00650486;
+			packageReferences = (
+				56C1EE972C8E398400650486 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				5658917B2CA7EE0A0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			productRefGroup = 56C1EE782C8E2F4C00650486 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56C1EE762C8E2F4C00650486 /* Schedule */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56C1EE752C8E2F4C00650486 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C1EE842C8E2F4D00650486 /* Assets.xcassets in Resources */,
+				56C1EE872C8E2F4D00650486 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56C1EE732C8E2F4C00650486 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				566EE73C2C94A9E1002C4506 /* AlertForSubjects.swift in Sources */,
+				5662D4D52C91B0BA00ECB9AD /* AlertDate.swift in Sources */,
+				566EE7422C94B574002C4506 /* ColorTableViewCell.swift in Sources */,
+				566EE7442C94BA3D002C4506 /* TaskOptionTableViewController.swift in Sources */,
+				56C1EE7F2C8E2F4C00650486 /* MainTabBarController.swift in Sources */,
+				56B5C2082C8F5846008BFF1A /* ScheduleTableViewCell.swift in Sources */,
+				56C1EE7B2C8E2F4C00650486 /* AppDelegate.swift in Sources */,
+				566EE7402C94AEF2002C4506 /* TeachersViewController.swift in Sources */,
+				5662344E2C90518900ACCCA5 /* PressButtonProtocol.swift in Sources */,
+				56B5C20C2C8F70F3008BFF1A /* UIStackViewExtension.swift in Sources */,
+				56B5C2102C8F7A77008BFF1A /* UILabel.swift in Sources */,
+				566EE74C2C95A51A002C4506 /* ContactOptionTableViewController.swift in Sources */,
+				563C7F2B2C9DFC8400686185 /* ScheduleModel.swift in Sources */,
+				56C1EE942C8E336900650486 /* TasksViewController.swift in Sources */,
+				566EE74A2C9593C0002C4506 /* ContactsTableViewCell.swift in Sources */,
+				566EE7522C95B2DA002C4506 /* AlertTeacherAndFriends.swift in Sources */,
+				566EE73A2C94A823002C4506 /* AlertTime.swift in Sources */,
+				5629725B2C908556000DFCB0 /* OptionsScheduleTableViewCell.swift in Sources */,
+				566EE7482C94C0EB002C4506 /* ColorTaskTableViewController.swift in Sources */,
+				56C1EE7D2C8E2F4C00650486 /* SceneDelegate.swift in Sources */,
+				562972602C909568000DFCB0 /* HeaderOptionsTableViewCell.swift in Sources */,
+				566EE74E2C95A705002C4506 /* ContactOptionTableViewCell.swift in Sources */,
+				566EE7502C95B086002C4506 /* AlertPhotoCamera.swift in Sources */,
+				56C1EE922C8E332F00650486 /* ScheduleViewController.swift in Sources */,
+				566EE7462C94BB6E002C4506 /* OptionsTaskTableViewCell.swift in Sources */,
+				563C7F2E2C9E009100686185 /* RealmManager.swift in Sources */,
+				56B5C2122C8F7D81008BFF1A /* UIFont.swift in Sources */,
+				56C1EE962C8E338D00650486 /* ContactsTableViewController.swift in Sources */,
+				5662344B2C90495F00ACCCA5 /* TasksTableViewCell.swift in Sources */,
+				566EE73E2C94AEC7002C4506 /* ScheduleColorViewController.swift in Sources */,
+				562972562C908120000DFCB0 /* OptionsScheduleTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		56C1EE852C8E2F4D00650486 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56C1EE862C8E2F4D00650486 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56C1EE892C8E2F4D00650486 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		56C1EE8A2C8E2F4D00650486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56C1EE8C2C8E2F4D00650486 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NM9L9Z2DW5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Schedule/Resourses/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nk13.Schedule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		56C1EE8D2C8E2F4D00650486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NM9L9Z2DW5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Schedule/Resourses/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nk13.Schedule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56C1EE722C8E2F4C00650486 /* Build configuration list for PBXProject "Schedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56C1EE892C8E2F4D00650486 /* Debug */,
+				56C1EE8A2C8E2F4D00650486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56C1EE8B2C8E2F4D00650486 /* Build configuration list for PBXNativeTarget "Schedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56C1EE8C2C8E2F4D00650486 /* Debug */,
+				56C1EE8D2C8E2F4D00650486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5658917B2CA7EE0A0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.12.0;
+			};
+		};
+		56C1EE972C8E398400650486 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5658917C2CA7EE0A0033F053 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5658917B2CA7EE0A0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		5658917E2CA7EE0A0033F053 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5658917B2CA7EE0A0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		56C1EE982C8E398400650486 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56C1EE972C8E398400650486 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 56C1EE6F2C8E2F4C00650486 /* Project object */;
+}
