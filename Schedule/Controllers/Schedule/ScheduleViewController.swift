@@ -1,10 +1,14 @@
 import UIKit
 import FSCalendar
+import RealmSwift
 
 class ScheduleViewController: UIViewController {
     
     private let idScheduleCell = "idScheduleCell"
     private var calendarHeightConstraint: NSLayoutConstraint!
+    
+    let localRealm = try! Realm()
+    var scheduleArray: Results<ScheduleModel>!
     
     
     //MARK: - Создание UI-Элементов
@@ -153,7 +157,25 @@ extension ScheduleViewController: FSCalendarDataSource {
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print(date)
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.weekday], from: date)
+        guard let weekday = components.weekday else { return }
+        print(weekday)
+        
+        let dateStart = date
+        let dateEnd: Date = {
+            let components = DateComponents(day: 1, second: -1)
+            guard let calendar = Calendar.current.date(byAdding: components, to: dateStart) else { return Date() }
+            return calendar
+        }()
+        
+        let predicateRepeat = NSPredicate(format: "scheduleWeekday = \(weekday) AND scheduleRepeat = true")
+        let predicateUnrepeat = NSPredicate(format: "scheduleRepeat = false AND scheduleDate = BETWEEN %@", [dateStart, dateEnd])
+        
+        // - Объединяем созданные предикаты
+        let compound = NSCompoundPredicate(type: .or, subpredicates: [predicateRepeat, predicateUnrepeat])
+        scheduleArray = localRealm.objects(ScheduleModel.self).filter(predicateRepeat)
+        print(scheduleArray)
     }
 }
 
