@@ -9,12 +9,12 @@ import UIKit
 import RealmSwift
 
 class ScheduleModel: Object {
-    @Persisted var scheduleDate = Date()
-    @Persisted var scheduleTime = Date()
-    @Persisted var scheduleName: String = ""
-    @Persisted var scheduleType: String = ""
-    @Persisted var scheduleBuilding: String = ""
-    @Persisted var scheduleAudience: String = ""
+    @Persisted var scheduleDate: Date?
+    @Persisted var scheduleTime: Date?
+    @Persisted var scheduleName: String = "Не выбрано"
+    @Persisted var scheduleType: String = "Не выбрано"
+    @Persisted var scheduleBuilding: String = "Не выбрано"
+    @Persisted var scheduleAudience: String = "Не выбрано"
     @Persisted var scheduleTeacher: String = "Name Lastname"
     @Persisted var scheduleColor: String = "FFFFFF"
     @Persisted var scheduleRepeat: Bool = true

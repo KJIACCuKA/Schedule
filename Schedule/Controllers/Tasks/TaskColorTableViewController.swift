@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ColorTaskTableViewController: UITableViewController {
+class TaskColorTableViewController: UITableViewController {
     
     private let idTasksColorCell = "idTasksColorCell"
     private let idTaskHeader = "idTaskHeader"
@@ -33,7 +33,7 @@ class ColorTaskTableViewController: UITableViewController {
 
 //MARK: - UITableViewDataSource
 
-extension ColorTaskTableViewController {
+extension TaskColorTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 6

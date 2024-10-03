@@ -2,12 +2,13 @@ import UIKit
 import RealmSwift
 
 // - ДЛЯ ПРОЕКТА TRACKER МОЖНО СДЕЛАТЬ ТАКУЮ ЖЕ РЕАЛИЗАЦИЮ ДЛЯ ЭКРАНОВ С ДОБАВЛЕНИЕМ ПРИВЫЧЕК
-class OptionsScheduleTableViewController: UITableViewController {
+class ScheduleOptionsTableViewController: UITableViewController {
     
     private let idOptionsScheduleCell = "idOptionsScheduleCell"
     private let idOptionsHeader = "idOptionsScheduleHeader"
     let headerNameArray = ["ДАТА И ВРЕМЯ", "ПРЕДМЕТ", "ПРЕПОДАВАТЕЛЬ", "ЦВЕТ", "ПЕРИОД"]
     private let scheduleModel = ScheduleModel()
+    var hexColorCell = "FFFFFF"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class OptionsScheduleTableViewController: UITableViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.bounces = false
-        tableView.register(OptionsScheduleTableViewCell.self, forCellReuseIdentifier: idOptionsScheduleCell)
+        tableView.register(ScheduleOptionsTableViewCell.self, forCellReuseIdentifier: idOptionsScheduleCell)
         tableView.register(HeaderOptionsTableViewCell.self, forHeaderFooterViewReuseIdentifier: idOptionsHeader)
         tableView.backgroundColor = .white
 //        tableView.separatorStyle = .none
@@ -34,15 +35,22 @@ class OptionsScheduleTableViewController: UITableViewController {
     }
     
     @objc private func saveButtonTapped() {
-        print("PRINT SUKA BLYAT")
         
-        RealmManager.shared.saveScheduleModel(model: scheduleModel)
+        if scheduleModel.scheduleDate == nil || scheduleModel.scheduleTime == nil || scheduleModel.scheduleName == "Не заполнено" {
+            alertOK(title: "Ошибка создания", message: "Заполните все обязательные поля")
+        } else {
+            scheduleModel.scheduleColor = hexColorCell
+            alertOK(title: "Успешно создано!", message: nil)
+            RealmManagerSave.shared.saveScheduleModel(model: scheduleModel)
+            tableView.reloadData()
+        }
+        
     }
 }
 
 //MARK: - UITableViewDataSource
 
-extension OptionsScheduleTableViewController {
+extension ScheduleOptionsTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 5
@@ -61,9 +69,11 @@ extension OptionsScheduleTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsScheduleCell, for: indexPath) as? OptionsScheduleTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsScheduleCell, for: indexPath) as? ScheduleOptionsTableViewCell else { return UITableViewCell() }
         // - Передаем названия ячеек 
-        cell.cellConfigure(indexPath: indexPath)
+        cell.cellScheduleConfigure(indexPath: indexPath)
+        let color = UIColor().colorFromHex(hexColorCell)
+        cell.backgroundViewCell.backgroundColor = (indexPath.section == 3 ? color : .white)
         cell.switchRepeatDelegate = self
         return cell
     }
@@ -85,7 +95,7 @@ extension OptionsScheduleTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // - Передаем переменные в ячейку
-        guard let cell = tableView.cellForRow(at: indexPath) as? OptionsScheduleTableViewCell else { return }
+        guard let cell = tableView.cellForRow(at: indexPath) as? ScheduleOptionsTableViewCell else { return }
         switch indexPath {
         case [0,0]:
             alertDate(label: cell.nameCellLabel) { numberWeekday, date in
@@ -127,7 +137,7 @@ extension OptionsScheduleTableViewController {
     }
 }
 
-extension OptionsScheduleTableViewController: SwitchRepeatDelegate {
+extension ScheduleOptionsTableViewController: SwitchRepeatDelegate {
     func switchRepeat(value: Bool) {
         print(value)
         scheduleModel.scheduleRepeat = value

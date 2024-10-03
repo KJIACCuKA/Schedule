@@ -24,7 +24,7 @@ class TaskOptionTableViewController: UITableViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.bounces = false
-        tableView.register(OptionsTaskTableViewCell.self, forCellReuseIdentifier: idOptionsTaskCell)
+        tableView.register(TaskOptionsTableViewCell.self, forCellReuseIdentifier: idOptionsTaskCell)
         tableView.register(HeaderOptionsTableViewCell.self, forHeaderFooterViewReuseIdentifier: idOptionsTasksHeader)
         tableView.backgroundColor = .white
 //        tableView.separatorStyle = .none
@@ -45,7 +45,7 @@ extension TaskOptionTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsTaskCell, for: indexPath) as? OptionsTaskTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsTaskCell, for: indexPath) as? TaskOptionsTableViewCell else { return UITableViewCell() }
         // - Передаем названия ячеек
         cell.cellConfigure(indexPath: indexPath)
         return cell
@@ -68,7 +68,7 @@ extension TaskOptionTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // - Передаем переменные в ячейку
-        guard let cell = tableView.cellForRow(at: indexPath) as? OptionsTaskTableViewCell else { return }
+        guard let cell = tableView.cellForRow(at: indexPath) as? TaskOptionsTableViewCell else { return }
         switch indexPath.section {
         case 0:
             alertDate(label: cell.nameCellLabel) { numberWeekday, date in
@@ -83,7 +83,7 @@ extension TaskOptionTableViewController {
                 print(text)
             }
         case 3:
-            let colorTaskTVC = ColorTaskTableViewController()
+            let colorTaskTVC = TaskColorTableViewController()
                 navigationController?.pushViewController(colorTaskTVC, animated: true)
         default:
             print("Tap last cell")

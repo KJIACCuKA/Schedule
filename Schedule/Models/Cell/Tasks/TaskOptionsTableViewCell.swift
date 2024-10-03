@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OptionsTaskTableViewCell: UITableViewCell {
+class TaskOptionsTableViewCell: UITableViewCell {
     
     let cellNameArray = ["Дата",
                          "Название",

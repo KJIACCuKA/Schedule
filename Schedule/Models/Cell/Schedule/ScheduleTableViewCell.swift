@@ -4,23 +4,23 @@ class ScheduleTableViewCell: UITableViewCell {
     
     //MARK: - Создание UI-Элементов
     
-    private lazy var lessonName = UILabel(text: "Программирование", font: .avenirNextDemiBold20())
+    private lazy var lessonName = UILabel(text: "", font: .avenirNextDemiBold20())
     
-    private lazy var lessonTime = UILabel(text: "08:00", font: .avenirNextDemiBold20())
+    private lazy var lessonTime = UILabel(text: "", font: .avenirNextDemiBold20())
     
-    private lazy var teacherName = UILabel(text: "Антонов Антон Антонович", font: .avenirNext20(), aligment: .right)
+    private lazy var teacherName = UILabel(text: "", font: .avenirNext20(), aligment: .right)
     
     private lazy var typeLabel = UILabel(text: "Тип:", font: .avenirNext14(), aligment: .right)
     
-    private lazy var lessonType = UILabel(text: "Лекция", font: .avenirNextDemiBold14())
+    private lazy var lessonType = UILabel(text: "", font: .avenirNextDemiBold14())
     
     private lazy var buildingLabel = UILabel(text: "Корпус:", font: .avenirNext14(), aligment: .right)
     
-    private lazy var lessonBuilding = UILabel(text: "1", font: .avenirNextDemiBold14())
+    private lazy var lessonBuilding = UILabel(text: "", font: .avenirNextDemiBold14())
     
     private lazy var audLabel = UILabel(text: "Аудитория:", font: .avenirNext14(), aligment: .right)
     
-    private lazy var lessonAud = UILabel(text: "101", font: .avenirNextDemiBold14())
+    private lazy var lessonAud = UILabel(text: "", font: .avenirNextDemiBold14())
     
     //MARK: - init
     
@@ -75,6 +75,21 @@ class ScheduleTableViewCell: UITableViewCell {
             bottomStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
             bottomStackView.heightAnchor.constraint(equalToConstant: 25)
         ])
+    }
+    
+    func configure(model: ScheduleModel) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
+        lessonName.text = model.scheduleName
+        teacherName.text = model.scheduleTeacher
+        guard let time = model.scheduleTime else { return }
+        lessonTime.text = dateFormatter.string(from: time)
+        lessonType.text = model.scheduleType
+        lessonBuilding.text = model.scheduleBuilding
+        lessonAud.text = model.scheduleAudience
+        self.backgroundColor = UIColor().colorFromHex("\(model.scheduleColor)")
         
     }
 }

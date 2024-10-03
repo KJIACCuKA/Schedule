@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OptionsScheduleTableViewCell: UITableViewCell {
+class ScheduleOptionsTableViewCell: UITableViewCell {
     
     let cellNameArray = [["Дата", "Время"],
                          ["Название", "Тип", "Корпус", "Аудитория"],
@@ -17,7 +17,7 @@ class OptionsScheduleTableViewCell: UITableViewCell {
     
     weak var switchRepeatDelegate: SwitchRepeatDelegate?
     
-    private lazy var backgroundViewCell: UIView = {
+    lazy var backgroundViewCell: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
@@ -55,17 +55,16 @@ class OptionsScheduleTableViewCell: UITableViewCell {
     }
     
     // - Функция для заполнения ячеек названиями из массива cellNameArray
-    func cellConfigure(indexPath: IndexPath) {
+    func cellScheduleConfigure(indexPath: IndexPath) {
         nameCellLabel.text = cellNameArray[indexPath.section][indexPath.row]
         nameCellLabel.textColor = .lightGray
+        repeatSwitch.isHidden = (indexPath.section == 4 ? false : true)
         
-        if indexPath == [3,0] {
-            backgroundViewCell.backgroundColor = .red
-        }
-        
-        if indexPath == [4,0] {
-            repeatSwitch.isHidden = false
-        }
+    }
+    
+    func cellTaskConfigure(nameArray: [String], indexPath: IndexPath) {
+        nameCellLabel.text = nameArray[indexPath.section]
+        backgroundViewCell.backgroundColor = (indexPath.section == 3 ? #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1) : .white)
     }
     
     private func addViews() {

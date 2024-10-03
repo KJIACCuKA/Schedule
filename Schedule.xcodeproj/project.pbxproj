@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		562972562C908120000DFCB0 /* OptionsScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562972552C908120000DFCB0 /* OptionsScheduleTableViewController.swift */; };
-		5629725B2C908556000DFCB0 /* OptionsScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629725A2C908556000DFCB0 /* OptionsScheduleTableViewCell.swift */; };
+		562972562C908120000DFCB0 /* ScheduleOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562972552C908120000DFCB0 /* ScheduleOptionsTableViewController.swift */; };
+		5629725B2C908556000DFCB0 /* ScheduleOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629725A2C908556000DFCB0 /* ScheduleOptionsTableViewCell.swift */; };
 		562972602C909568000DFCB0 /* HeaderOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629725F2C909568000DFCB0 /* HeaderOptionsTableViewCell.swift */; };
 		563C7F2B2C9DFC8400686185 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C7F2A2C9DFC8400686185 /* ScheduleModel.swift */; };
-		563C7F2E2C9E009100686185 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C7F2D2C9E009100686185 /* RealmManager.swift */; };
-		565891872CA7F1CA0033F053 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 565891862CA7F1CA0033F053 /* RealmSwift */; };
+		563C7F2E2C9E009100686185 /* RealmManagerSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C7F2D2C9E009100686185 /* RealmManagerSave.swift */; };
 		565891892CA7FEB60033F053 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565891882CA7FEB60033F053 /* UIColor.swift */; };
 		5662344B2C90495F00ACCCA5 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662344A2C90495F00ACCCA5 /* TasksTableViewCell.swift */; };
 		5662344E2C90518900ACCCA5 /* PressButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662344D2C90518900ACCCA5 /* PressButtonProtocol.swift */; };
@@ -23,13 +22,15 @@
 		566EE7402C94AEF2002C4506 /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE73F2C94AEF2002C4506 /* TeachersViewController.swift */; };
 		566EE7422C94B574002C4506 /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7412C94B574002C4506 /* ColorTableViewCell.swift */; };
 		566EE7442C94BA3D002C4506 /* TaskOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7432C94BA3D002C4506 /* TaskOptionTableViewController.swift */; };
-		566EE7462C94BB6E002C4506 /* OptionsTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7452C94BB6E002C4506 /* OptionsTaskTableViewCell.swift */; };
-		566EE7482C94C0EB002C4506 /* ColorTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7472C94C0EB002C4506 /* ColorTaskTableViewController.swift */; };
+		566EE7462C94BB6E002C4506 /* TaskOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7452C94BB6E002C4506 /* TaskOptionsTableViewCell.swift */; };
+		566EE7482C94C0EB002C4506 /* TaskColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7472C94C0EB002C4506 /* TaskColorTableViewController.swift */; };
 		566EE74A2C9593C0002C4506 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7492C9593C0002C4506 /* ContactsTableViewCell.swift */; };
 		566EE74C2C95A51A002C4506 /* ContactOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE74B2C95A51A002C4506 /* ContactOptionTableViewController.swift */; };
 		566EE74E2C95A705002C4506 /* ContactOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE74D2C95A705002C4506 /* ContactOptionTableViewCell.swift */; };
 		566EE7502C95B086002C4506 /* AlertPhotoCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE74F2C95B086002C4506 /* AlertPhotoCamera.swift */; };
 		566EE7522C95B2DA002C4506 /* AlertTeacherAndFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EE7512C95B2DA002C4506 /* AlertTeacherAndFriends.swift */; };
+		5676D1912CAE7EBF00CF7821 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5676D1902CAE7EBF00CF7821 /* RealmSwift */; };
+		5676D1932CAEA51500CF7821 /* AlertOk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676D1922CAEA51500CF7821 /* AlertOk.swift */; };
 		56B5C2082C8F5846008BFF1A /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5C2072C8F5846008BFF1A /* ScheduleTableViewCell.swift */; };
 		56B5C20C2C8F70F3008BFF1A /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5C20B2C8F70F3008BFF1A /* UIStackViewExtension.swift */; };
 		56B5C2102C8F7A77008BFF1A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5C20F2C8F7A77008BFF1A /* UILabel.swift */; };
@@ -46,11 +47,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		562972552C908120000DFCB0 /* OptionsScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScheduleTableViewController.swift; sourceTree = "<group>"; };
-		5629725A2C908556000DFCB0 /* OptionsScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		562972552C908120000DFCB0 /* ScheduleOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleOptionsTableViewController.swift; sourceTree = "<group>"; };
+		5629725A2C908556000DFCB0 /* ScheduleOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleOptionsTableViewCell.swift; sourceTree = "<group>"; };
 		5629725F2C909568000DFCB0 /* HeaderOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOptionsTableViewCell.swift; sourceTree = "<group>"; };
 		563C7F2A2C9DFC8400686185 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
-		563C7F2D2C9E009100686185 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		563C7F2D2C9E009100686185 /* RealmManagerSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerSave.swift; sourceTree = "<group>"; };
 		565891882CA7FEB60033F053 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		5662344A2C90495F00ACCCA5 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 		5662344D2C90518900ACCCA5 /* PressButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressButtonProtocol.swift; sourceTree = "<group>"; };
@@ -61,13 +62,14 @@
 		566EE73F2C94AEF2002C4506 /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
 		566EE7412C94B574002C4506 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		566EE7432C94BA3D002C4506 /* TaskOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOptionTableViewController.swift; sourceTree = "<group>"; };
-		566EE7452C94BB6E002C4506 /* OptionsTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTaskTableViewCell.swift; sourceTree = "<group>"; };
-		566EE7472C94C0EB002C4506 /* ColorTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTaskTableViewController.swift; sourceTree = "<group>"; };
+		566EE7452C94BB6E002C4506 /* TaskOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOptionsTableViewCell.swift; sourceTree = "<group>"; };
+		566EE7472C94C0EB002C4506 /* TaskColorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskColorTableViewController.swift; sourceTree = "<group>"; };
 		566EE7492C9593C0002C4506 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		566EE74B2C95A51A002C4506 /* ContactOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactOptionTableViewController.swift; sourceTree = "<group>"; };
 		566EE74D2C95A705002C4506 /* ContactOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactOptionTableViewCell.swift; sourceTree = "<group>"; };
 		566EE74F2C95B086002C4506 /* AlertPhotoCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPhotoCamera.swift; sourceTree = "<group>"; };
 		566EE7512C95B2DA002C4506 /* AlertTeacherAndFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTeacherAndFriends.swift; sourceTree = "<group>"; };
+		5676D1922CAEA51500CF7821 /* AlertOk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertOk.swift; sourceTree = "<group>"; };
 		56B5C2072C8F5846008BFF1A /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		56B5C20B2C8F70F3008BFF1A /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		56B5C20F2C8F7A77008BFF1A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
@@ -89,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				565891872CA7F1CA0033F053 /* RealmSwift in Frameworks */,
+				5676D1912CAE7EBF00CF7821 /* RealmSwift in Frameworks */,
 				56C1EE992C8E398400650486 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				56C1EE912C8E332F00650486 /* ScheduleViewController.swift */,
-				562972552C908120000DFCB0 /* OptionsScheduleTableViewController.swift */,
+				562972552C908120000DFCB0 /* ScheduleOptionsTableViewController.swift */,
 				566EE73D2C94AEC7002C4506 /* ScheduleColorViewController.swift */,
 			);
 			path = Schedule;
@@ -112,7 +114,7 @@
 			children = (
 				566EE7432C94BA3D002C4506 /* TaskOptionTableViewController.swift */,
 				56C1EE932C8E336900650486 /* TasksViewController.swift */,
-				566EE7472C94C0EB002C4506 /* ColorTaskTableViewController.swift */,
+				566EE7472C94C0EB002C4506 /* TaskColorTableViewController.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -130,7 +132,7 @@
 		5629725C2C909156000DFCB0 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				5629725A2C908556000DFCB0 /* OptionsScheduleTableViewCell.swift */,
+				5629725A2C908556000DFCB0 /* ScheduleOptionsTableViewCell.swift */,
 				56B5C2072C8F5846008BFF1A /* ScheduleTableViewCell.swift */,
 			);
 			path = Schedule;
@@ -140,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				5662344A2C90495F00ACCCA5 /* TasksTableViewCell.swift */,
-				566EE7452C94BB6E002C4506 /* OptionsTaskTableViewCell.swift */,
+				566EE7452C94BB6E002C4506 /* TaskOptionsTableViewCell.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -165,7 +167,7 @@
 		563C7F2C2C9E007500686185 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				563C7F2D2C9E009100686185 /* RealmManager.swift */,
+				563C7F2D2C9E009100686185 /* RealmManagerSave.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,6 +188,7 @@
 				566EE73B2C94A9E1002C4506 /* AlertForSubjects.swift */,
 				566EE74F2C95B086002C4506 /* AlertPhotoCamera.swift */,
 				566EE7512C95B2DA002C4506 /* AlertTeacherAndFriends.swift */,
+				5676D1922CAEA51500CF7821 /* AlertOk.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -309,7 +312,7 @@
 			name = Schedule;
 			packageProductDependencies = (
 				56C1EE982C8E398400650486 /* FSCalendar */,
-				565891862CA7F1CA0033F053 /* RealmSwift */,
+				5676D1902CAE7EBF00CF7821 /* RealmSwift */,
 			);
 			productName = Schedule;
 			productReference = 56C1EE772C8E2F4C00650486 /* Schedule.app */;
@@ -341,7 +344,7 @@
 			mainGroup = 56C1EE6E2C8E2F4C00650486;
 			packageReferences = (
 				56C1EE972C8E398400650486 /* XCRemoteSwiftPackageReference "FSCalendar" */,
-				565891852CA7F1CA0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				5676D18F2CAE7EBF00CF7821 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 56C1EE782C8E2F4C00650486 /* Products */;
 			projectDirPath = "";
@@ -373,6 +376,7 @@
 				5662D4D52C91B0BA00ECB9AD /* AlertDate.swift in Sources */,
 				566EE7422C94B574002C4506 /* ColorTableViewCell.swift in Sources */,
 				566EE7442C94BA3D002C4506 /* TaskOptionTableViewController.swift in Sources */,
+				5676D1932CAEA51500CF7821 /* AlertOk.swift in Sources */,
 				56C1EE7F2C8E2F4C00650486 /* MainTabBarController.swift in Sources */,
 				565891892CA7FEB60033F053 /* UIColor.swift in Sources */,
 				56B5C2082C8F5846008BFF1A /* ScheduleTableViewCell.swift in Sources */,
@@ -387,20 +391,20 @@
 				566EE74A2C9593C0002C4506 /* ContactsTableViewCell.swift in Sources */,
 				566EE7522C95B2DA002C4506 /* AlertTeacherAndFriends.swift in Sources */,
 				566EE73A2C94A823002C4506 /* AlertTime.swift in Sources */,
-				5629725B2C908556000DFCB0 /* OptionsScheduleTableViewCell.swift in Sources */,
-				566EE7482C94C0EB002C4506 /* ColorTaskTableViewController.swift in Sources */,
+				5629725B2C908556000DFCB0 /* ScheduleOptionsTableViewCell.swift in Sources */,
+				566EE7482C94C0EB002C4506 /* TaskColorTableViewController.swift in Sources */,
 				56C1EE7D2C8E2F4C00650486 /* SceneDelegate.swift in Sources */,
 				562972602C909568000DFCB0 /* HeaderOptionsTableViewCell.swift in Sources */,
 				566EE74E2C95A705002C4506 /* ContactOptionTableViewCell.swift in Sources */,
 				566EE7502C95B086002C4506 /* AlertPhotoCamera.swift in Sources */,
 				56C1EE922C8E332F00650486 /* ScheduleViewController.swift in Sources */,
-				566EE7462C94BB6E002C4506 /* OptionsTaskTableViewCell.swift in Sources */,
-				563C7F2E2C9E009100686185 /* RealmManager.swift in Sources */,
+				566EE7462C94BB6E002C4506 /* TaskOptionsTableViewCell.swift in Sources */,
+				563C7F2E2C9E009100686185 /* RealmManagerSave.swift in Sources */,
 				56B5C2122C8F7D81008BFF1A /* UIFont.swift in Sources */,
 				56C1EE962C8E338D00650486 /* ContactsTableViewController.swift in Sources */,
 				5662344B2C90495F00ACCCA5 /* TasksTableViewCell.swift in Sources */,
 				566EE73E2C94AEC7002C4506 /* ScheduleColorViewController.swift in Sources */,
-				562972562C908120000DFCB0 /* OptionsScheduleTableViewController.swift in Sources */,
+				562972562C908120000DFCB0 /* ScheduleOptionsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +621,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		565891852CA7F1CA0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		5676D18F2CAE7EBF00CF7821 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
 			requirement = {
@@ -636,9 +640,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		565891862CA7F1CA0033F053 /* RealmSwift */ = {
+		5676D1902CAE7EBF00CF7821 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 565891852CA7F1CA0033F053 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 5676D18F2CAE7EBF00CF7821 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 		56C1EE982C8E398400650486 /* FSCalendar */ = {
